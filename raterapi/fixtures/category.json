@@ -1,0 +1,65 @@
+[
+  {
+    "pk": 1,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "dice"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "card"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "miniature"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "deck building"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "role playing"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "sports"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "adventure"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "cooperative"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "battle"
+    }
+  }
+]

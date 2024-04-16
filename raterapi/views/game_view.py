@@ -89,18 +89,18 @@ class GameView(ViewSet):
     #             {"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR
     #         )
 
-    # def list(self, request):
-    #     """Handle GET requests for all items
+    def list(self, request):
+        """Handle GET requests for all items
 
-    #     Returns:
-    #         Response -- JSON serialized array
-    #     """
-    #     try:
-    #         voids = Void.objects.all()
-    #         serializer = VoidSerializer(voids, many=True)
-    #         return Response(serializer.data, status=status.HTTP_200_OK)
-    #     except Exception as ex:
-    #         return HttpResponseServerError(ex)
+        Returns:
+            Response -- JSON serialized array
+        """
+        try:
+            games = Game.objects.all()
+            serializer = GameSerializer(games, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Exception as ex:
+            return HttpResponseServerError(ex)
 
 
 class UserGameSerializer(serializers.ModelSerializer):

@@ -1,0 +1,152 @@
+[
+  {
+    "pk": 1,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "Catan",
+      "description": "A classic strategy board game",
+      "designer": "Klaus Teuber",
+      "year_released": "1995-09-01",
+      "number_of_players": 4,
+      "estimated_time_to_play": "90-120 minutes",
+      "age_recommendation": 12,
+      "user": 1,
+      "image_url": "https://example.com/catan.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "description": "An open-world action-adventure game set in the kingdom of Hyrule.",
+      "designer": "Hidemaro Fujibayashi",
+      "year_released": "2017-03-03",
+      "number_of_players": 1,
+      "estimated_time_to_play": "50-200 hours",
+      "age_recommendation": 12,
+      "user": 2,
+      "image_url": "https://example.com/zelda-botw.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "Minecraft",
+      "description": "A sandbox game where players can build, explore, and survive.",
+      "designer": "Markus 'Notch' Persson",
+      "year_released": "2009-05-17",
+      "number_of_players": 1,
+      "estimated_time_to_play": "Endless",
+      "age_recommendation": 7,
+      "user": 1,
+      "image_url": "https://example.com/minecraft.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "Red Dead Redemption 2",
+      "description": "An action-adventure game set in the American frontier.",
+      "designer": "Rockstar Games",
+      "year_released": "2018-10-26",
+      "number_of_players": 1,
+      "estimated_time_to_play": "60-100 hours",
+      "age_recommendation": 18,
+      "user": 3,
+      "image_url": "https://example.com/rdr2.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "Halo: Combat Evolved",
+      "description": "A first-person shooter game set in a science fiction universe.",
+      "designer": "Bungie",
+      "year_released": "2001-11-15",
+      "number_of_players": 4,
+      "estimated_time_to_play": "8-12 hours",
+      "age_recommendation": 17,
+      "user": 2,
+      "image_url": "https://example.com/halo.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "Super Mario Odyssey",
+      "description": "A 3D platformer game featuring the iconic Nintendo character Mario.",
+      "designer": "Nintendo",
+      "year_released": "2017-10-27",
+      "number_of_players": 1,
+      "estimated_time_to_play": "10-20 hours",
+      "age_recommendation": 10,
+      "user": 1,
+      "image_url": "https://example.com/mario-odyssey.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "Portal 2",
+      "description": "A first-person puzzle game that challenges players to use a portal gun to navigate through levels.",
+      "designer": "Valve Corporation",
+      "year_released": "2011-04-19",
+      "number_of_players": 1,
+      "estimated_time_to_play": "8-15 hours",
+      "age_recommendation": 13,
+      "user": 3,
+      "image_url": "https://example.com/portal2.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "Stardew Valley",
+      "description": "A farming simulation RPG set in a charming rural town.",
+      "designer": "ConcernedApe",
+      "year_released": "2016-02-26",
+      "number_of_players": 1,
+      "estimated_time_to_play": "50-100 hours",
+      "age_recommendation": 10,
+      "user": 2,
+      "image_url": "https://example.com/stardew-valley.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "The Witcher 3: Wild Hunt",
+      "description": "An open-world action-adventure game set in a fantasy world.",
+      "designer": "CD Projekt Red",
+      "year_released": "2015-05-19",
+      "number_of_players": 1,
+      "estimated_time_to_play": "50-200 hours",
+      "age_recommendation": 18,
+      "user": 1,
+      "image_url": "https://example.com/the-witcher-3.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "raterapi.game",
+    "fields": {
+      "title": "Fortnite",
+      "description": "A battle royale game where players compete to be the last one standing.",
+      "designer": "Epic Games",
+      "year_released": "2017-07-25",
+      "number_of_players": 100,
+      "estimated_time_to_play": "20-30 minutes",
+      "age_recommendation": 13,
+      "user": 3,
+      "image_url": "https://example.com/fortnite.jpg"
+    }
+  }
+]

@@ -12,3 +12,6 @@ class Game(models.Model):
     age_recommendation = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="games")
     image_url = models.CharField(max_length=255)
+    categories = models.ManyToManyField(
+        "Category", through="GameCategory", related_name="games"
+    )

@@ -3,63 +3,77 @@
     "pk": 1,
     "model": "raterapi.category",
     "fields": {
-      "label": "dice"
+      "label": "strategy"
     }
   },
   {
     "pk": 2,
     "model": "raterapi.category",
     "fields": {
-      "label": "card"
+      "label": "dice"
     }
   },
   {
     "pk": 3,
     "model": "raterapi.category",
     "fields": {
-      "label": "miniature"
+      "label": "card"
     }
   },
   {
     "pk": 4,
     "model": "raterapi.category",
     "fields": {
-      "label": "deck building"
+      "label": "miniature"
     }
   },
   {
     "pk": 5,
     "model": "raterapi.category",
     "fields": {
-      "label": "role playing"
+      "label": "deck building"
     }
   },
   {
     "pk": 6,
     "model": "raterapi.category",
     "fields": {
-      "label": "sports"
+      "label": "role playing"
     }
   },
   {
     "pk": 7,
     "model": "raterapi.category",
     "fields": {
-      "label": "adventure"
+      "label": "sports"
     }
   },
   {
     "pk": 8,
     "model": "raterapi.category",
     "fields": {
-      "label": "cooperative"
+      "label": "adventure"
     }
   },
   {
     "pk": 9,
     "model": "raterapi.category",
     "fields": {
+      "label": "cooperative"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "raterapi.category",
+    "fields": {
       "label": "battle"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "raterapi.category",
+    "fields": {
+      "label": "video"
     }
   }
 ]

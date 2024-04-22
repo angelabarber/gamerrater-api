@@ -3,7 +3,7 @@ from rest_framework import serializers, status
 from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
 from django.contrib.auth.models import User
-from raterapi.models import Game
+from raterapi.models import Game, Category
 
 
 class GameView(ViewSet):
@@ -16,6 +16,11 @@ class GameView(ViewSet):
             Response -- JSON serialized instance
         """
         user = request.auth.user
+
+        categories = []
+        for category_id in request.data["categories"]:
+            category = Category.objects.get(pk=category_id)
+            categories.append(category)
 
         game = Game()
         game.title = request.data["title"]
@@ -30,6 +35,7 @@ class GameView(ViewSet):
 
         try:
             game.save()
+            game.categories.set(categories)
             serializer = GameSerializer(game)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as ex:
@@ -119,10 +125,22 @@ class UserGameSerializer(serializers.ModelSerializer):
         )
 
 
+class GameCategorySerializer(serializers.ModelSerializer):
+    """JSON serializer"""
+
+    class Meta:
+        model = Category
+        fields = (
+            "id",
+            "label",
+        )
+
+
 class GameSerializer(serializers.ModelSerializer):
     """JSON Serializer"""
 
     user = UserGameSerializer(many=False)
+    categories = GameCategorySerializer(many=True)
 
     yearReleased = serializers.DateField(source="year_released")
     numberOfPlayers = serializers.IntegerField(source="number_of_players")
@@ -143,4 +161,5 @@ class GameSerializer(serializers.ModelSerializer):
             "ageRecommendation",
             "user",
             "imageUrl",
+            "categories",
         )

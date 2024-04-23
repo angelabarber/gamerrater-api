@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from rest_framework.authtoken.models import Token
-from rest_framework import status
+from rest_framework import status, serializers
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -81,3 +81,35 @@ def register_user(request):
         {"message": "You must provide email, password, first_name, and last_name"},
         status=status.HTTP_400_BAD_REQUEST,
     )
+
+
+@api_view(["GET"])
+@permission_classes([AllowAny])
+def get_current_user(request):
+    """Handle GET requests for single item
+
+    Returns:
+        Response -- JSON serialized instance
+    """
+
+    try:
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)
+    except Exception as ex:
+        return Response({"reason": ex.args[0]}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class UserSerializer(serializers.ModelSerializer):
+    """JSON Serializer"""
+
+    firstName = serializers.CharField(source="first_name")
+    lastName = serializers.CharField(source="last_name")
+
+    class Meta:
+        model = User
+        fields = (
+            "id",
+            "firstName",
+            "lastName",
+            "username",
+        )
